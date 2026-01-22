@@ -1,10 +1,15 @@
 ### GET all contacts
 GET http://localhost:8080/contacts
+
+
 ### GET one contact by id (replace with a real ID)
 GET http://localhost:8080/contacts/REPLACE_WITH_REAL_ID
+
+
 ### POST create new contact
 POST http://localhost:8080/contacts
 Content-Type: application/json
+
 {
   "firstName": "New",
   "lastName": "Person",
@@ -12,8 +17,10 @@ Content-Type: application/json
   "favoriteColor": "Orange",
   "birthday": "1999-12-31"
 }
-### PUT update contact
-PUT http://localhost:8080/contacts/697174b2a4eebaa9b8da11cb
+
+
+### PUT update contact (use ID returned from POST)
+PUT http://localhost:8080/contacts/REPLACE_WITH_REAL_ID
 Content-Type: application/json
 
 {
@@ -23,5 +30,7 @@ Content-Type: application/json
   "favoriteColor": "Red",
   "birthday": "1999-12-31"
 }
+
+
 ### DELETE contact (use same ID)
-DELETE http://localhost:8080/contacts/697174b2a4eebaa9b8da11cb
+DELETE http://localhost:8080/contacts/REPLACE_WITH_REAL_ID
