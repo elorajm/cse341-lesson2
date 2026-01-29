@@ -1,9 +1,12 @@
 const router = require("express").Router();
 
+// Root route
 router.get("/", (req, res) => {
-  res.send("CSE 341 Lesson 3 API is running");
+  res.send("CSE 341 Contacts API is running");
 });
 
-router.use("/contacts", require("./contacts"));
+// Contacts routes
+router.use("/contacts", require("./contacts"));      // original routes
+router.use("/api/contacts", require("./contacts"));  // Swagger routes
 
 module.exports = router;
